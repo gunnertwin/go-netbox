@@ -77,7 +77,7 @@ type WritablePrefix struct {
 	Role *int64 `json:"role,omitempty"`
 
 	// Site
-	Site *NestedSite `json:"site,omitempty"`
+	Site *int64 `json:"site,omitempty"`
 
 	// Status
 	//
