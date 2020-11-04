@@ -77,7 +77,7 @@ type WritablePrefix struct {
 	Role *int64 `json:"role,omitempty"`
 
 	// Site
-	Site *int64 `json:"site,omitempty"`
+	Site *NestedSite `json:"site,omitempty"`
 
 	// Status
 	//
@@ -120,6 +120,10 @@ func (m *WritablePrefix) Validate(formats strfmt.Registry) error {
 	}
 
 	if err := m.validatePrefix(formats); err != nil {
+		res = append(res, err)
+	}
+
+	if err := m.validateSite(formats); err != nil {
 		res = append(res, err)
 	}
 
@@ -184,6 +188,24 @@ func (m *WritablePrefix) validatePrefix(formats strfmt.Registry) error {
 
 	if err := validate.Required("prefix", "body", m.Prefix); err != nil {
 		return err
+	}
+
+	return nil
+}
+
+func (m *WritablePrefix) validateSite(formats strfmt.Registry) error {
+
+	if swag.IsZero(m.Site) { // not required
+		return nil
+	}
+
+	if m.Site != nil {
+		if err := m.Site.Validate(formats); err != nil {
+			if ve, ok := err.(*errors.Validation); ok {
+				return ve.ValidateName("site")
+			}
+			return err
+		}
 	}
 
 	return nil

@@ -31,7 +31,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"github.com/netbox-community/go-netbox/netbox/models"
+	"github.com/gunnertwin/go-netbox/models"
 )
 
 // NewIpamVlansPartialUpdateParams creates a new IpamVlansPartialUpdateParams object

@@ -43632,7 +43632,7 @@
         },
         "site": {
           "title": "Site",
-          "type": "integer",
+          "$ref": "#/definitions/NestedSite",
           "x-nullable": true
         },
         "vrf": {
