@@ -1,21 +1,11 @@
 module github.com/gunnertwin/go-netbox
 
-go 1.14
+go 1.15
 
 require (
-	github.com/asaskevich/govalidator v0.0.0-20200907205600-7a23bdc65eef // indirect
-	github.com/go-openapi/analysis v0.19.11 // indirect
 	github.com/go-openapi/errors v0.19.8
 	github.com/go-openapi/runtime v0.19.23
-	github.com/go-openapi/spec v0.19.12 // indirect
 	github.com/go-openapi/strfmt v0.19.8
 	github.com/go-openapi/swag v0.19.11
 	github.com/go-openapi/validate v0.19.12
-	github.com/go-swagger/go-swagger v0.25.0 // indirect
-	github.com/mailru/easyjson v0.7.6 // indirect
-	github.com/mitchellh/mapstructure v1.3.3 // indirect
-	github.com/netbox-community/go-netbox v0.0.0-20201002085217-91e5d561efe4
-	go.mongodb.org/mongo-driver v1.4.3 // indirect
-	golang.org/x/net v0.0.0-20201031054903-ff519b6c9102 // indirect
-	golang.org/x/text v0.3.4 // indirect
 )
